@@ -25,7 +25,6 @@ export function Navigation({
                 isActive ? "text-gray-light font-semibold" : "text-gray"
               }`}
               href={link.href}
-              key={link.name}
             >
               {link.name}
             </Link>
