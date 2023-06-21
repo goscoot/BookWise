@@ -1,7 +1,7 @@
 "use client";
 
 import Search from "@/components/search";
-import ChevronDownIcon from "@/app/icons/ChevronDownIcon";
+import ChevronDownIcon from "@/components/icons/ChevronDownIcon";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {
   Dispatch,
@@ -12,7 +12,7 @@ import {
 } from "react";
 import { supabase } from "@/app/lib/supabase";
 import Image from "next/image";
-import StarIcon from "@/app/icons/StarIcon";
+import StarIcon from "@/components/icons/StarIcon";
 
 interface Book {
   genre: string | null;
