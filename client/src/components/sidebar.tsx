@@ -14,7 +14,7 @@ export default function Sidebar() {
             { href: "/", name: "Strona domowa" },
             { href: "/profile", name: "Profil" },
             { href: "/shelfs", name: "Listy" },
-            { href: "/books", name: "Znajdź Książkę" },
+            { href: "/search", name: "Znajdź Książkę" },
             { href: "/statistics", name: "Statystyki" },
           ]}
         />

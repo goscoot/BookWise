@@ -17,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-gray-dark ${inter.className}`}>
-        <Sidebar />
-        {children}
+        <div className="flex">
+          <Sidebar />
+          {children}
+        </div>
       </body>
     </html>
   );
