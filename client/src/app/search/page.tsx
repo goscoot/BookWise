@@ -14,6 +14,15 @@ import { supabase } from "@/app/lib/supabase";
 import Image from "next/image";
 import StarIcon from "@/app/icons/StarIcon";
 
+interface Book {
+  genre: string | null;
+  id: number;
+  image: string;
+  name: string | null;
+  opinions: number | null;
+  rating: number | null;
+}
+
 const GENRES = [
   { name: "Poradnik", value: "poradnik" },
   { name: "Kryminal", value: "kryminal" },
@@ -21,7 +30,8 @@ const GENRES = [
 ];
 
 const Page = () => {
-  const [books, setBooks] = useState<any[] | null>();
+  const [books, setBooks] = useState<Book[] | null>();
+
   const [searchValue, setSearchValue] = useState<string>();
 
   const [genres, setGenres] = useState<string[]>([]);
