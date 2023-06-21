@@ -121,20 +121,24 @@ const Page = () => {
         </div>
 
         <div className="mt-8">
-          {books?.map(({ id, name, image, opinions, rating }) => (
-            <div key={id}>
-              <Image src={image} alt="book cover" width={150} height={200} />
+          {books ? (
+            books.map(({ id, name, image, opinions, rating }) => (
+              <div key={id}>
+                <Image src={image} alt="book cover" width={150} height={200} />
 
-              <h3 className="font-semibold mt-4">{name}</h3>
-              <div className="text-gray text-sm flex mt-2">
-                <StarIcon />
-                <span className="font-semibold text-gray-dark flex">
-                  {rating}
-                </span>{" "}
-                ({opinions} opinii)
+                <h3 className="font-semibold mt-4">{name}</h3>
+                <div className="text-gray text-sm flex mt-2">
+                  <StarIcon />
+                  <span className="font-semibold text-gray-dark flex">
+                    {rating}
+                  </span>{" "}
+                  ({opinions} opinii)
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>Wystapil blad podczas ladowania. Sprobuj ponownie.</p>
+          )}
         </div>
       </div>
     </div>
